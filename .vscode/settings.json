@@ -1,0 +1,8 @@
+{
+    "editor.inlineSuggest.enabled": true,
+    "editor.quickSuggestionsDelay": 5,
+    "typescript.suggest.completeFunctionCalls": true,
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "typescript.implementationsCodeLens.enabled": true,
+    "js/ts.implicitProjectConfig.checkJs": true
+}
