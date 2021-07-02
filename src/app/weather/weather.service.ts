@@ -35,7 +35,7 @@ export class WeatherService {
           .set('lat', String(coords.latitude))
           .set('lon', String(coords.longitude))
           .set('units', 'metric')
-          .set('appid', '5bb3d2c563c6800f9b7ecf8ef1da778a');
+          .set('appid', '');
       }),
       switchMap((params) =>
         this.http.get<OpenWeatherResponse>(this.url, { params })
