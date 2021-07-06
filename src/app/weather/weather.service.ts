@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
+import { environment } from 'src/environments/environment';
+
 import {
   filter,
   map,
@@ -11,6 +13,7 @@ import {
   toArray,
 } from 'rxjs/operators';
 
+environment
 interface OpenWeatherResponse {
   list: {
     dt_txt: string;
@@ -35,7 +38,7 @@ export class WeatherService {
           .set('lat', String(coords.latitude))
           .set('lon', String(coords.longitude))
           .set('units', 'metric')
-          .set('appid', '');
+          .set('appid', environment.API_KEY);
       }),
       switchMap((params) =>
         this.http.get<OpenWeatherResponse>(this.url, { params })
